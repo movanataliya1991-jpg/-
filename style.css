@@ -1,0 +1,1349 @@
+:root {
+  --main-bg: #e3e4ed;                 /* М'який фон */
+  --text-dark: #00492c;                /* Темно-зелений для тексту */
+  --highlight-bg: #fafcff;             /* Світлий фон блоків */
+  --highlight-bottom: #cbcbcb;         /* Градієнтна нижня межа */
+
+  --btn-color: #00492c;                /* М'ятно-зелена кнопка */
+  --btn-color-hover: #578f72;          /* Hover-кнопка */
+  --btn-text: #ffffff;                 /* Білий текст */
+
+  --frame-color: #c7a0c3;              /* Жіночні акценти */
+  --icon-color: #8c8f99;               /* Дрібні елементи */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.learning-list strong .roca-text {
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roca One';
+  src: url('fonts/RocaOne-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, .roca-text {
+  font-family: 'Roca One', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--main-bg);
+  padding: 60px 20px;
+}
+
+.hero-row {
+  max-width: 1200px;
+  max-height: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+  padding: 10px;
+  text-align: left;
+  order: 1;
+}
+
+.price .new-price,
+.price .old-price {
+  font-weight: 300; /* Тонкий шрифт для всього тексту */
+  margin-top: 120px;
+}
+
+.price .new-price strong {
+  font-weight: 700; /* Жирний шрифт лише для ціни 390 грн */
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: -100px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--btn-color-hover);
+  font-size: 24px;
+}
+
+.new-price {
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+
+.guarantee-accent-first {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 120px;
+  font-size: 28px;
+
+}
+
+.hero-button-wrapper {
+  margin-top: 40px;
+  order: 2;
+}
+
+.hero-image {
+  flex: 1 1 5cap;
+  padding: 0 0px;
+  text-align: right;
+  margin-top: -55px;
+  margin-right: 250px;
+  order: 3;
+}
+
+.hero-image img {
+  max-width: 300%;
+  width: 262%;
+  margin-right: 50px;
+  height: auto;
+}
+
+.info-block {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -20px;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.info-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.info-text .label {
+  font-size: 18px;
+}
+
+.info-text .value {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.hero-text h1 {
+  font-size: 66px;
+  font-weight: 500;
+  margin: 80px 0 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 10px 0 40px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: var(--text-dark);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-color-hover);
+  color: #ffffff;
+  border-color: var(--btn-color-hover);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 2 БЛОК */
+.course-for-you {
+  background-color: var(--highlight-bg);
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #2f2f2f;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--text-dark);
+  color: white;
+  text-decoration: none;
+  border: 2px solid var(--text-dark);
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* Ховер ефект */
+.floating-btn:hover {
+  background-color: var(--btn-color-hover);
+  color: #ffffff;
+  border-color: var(--btn-color-hover);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 2 БЛОК ІКОНКИ ТА СІТКА */
+
+.course-for-you {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 24px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.course-card p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+/* === 3 БЛОК: Авторка курсу === */
+/* === Секція: Авторка курсу === */
+
+.author-section {
+  background: linear-gradient(to bottom, var(--highlight-bg), var(--highlight-bottom));
+  padding: 80px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.author-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.author-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.author-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.author-content {
+  flex: 1 1 55%;
+}
+
+.author-subtitle {
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.author-name {
+  font-size: 45px;
+  color: #1f1f1f;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.author-description {
+  font-size: 22px;
+  line-height: 1.8;
+  color: #222;
+}
+
+.author-description p {
+  margin-bottom: 10px;
+}
+
+.author-description strong {
+  color: #00492c;
+  font-weight: 600;
+}
+
+
+/* === 4 БЛОК: Цитата === */
+.quote-section {
+  background-color: #ffffff;
+  padding: 20px 0; /* або 40px 0 для трохи більшого простору */
+  text-align: center;
+}
+
+.quote-card.dark {
+  background-color: #00492c;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 1000px;
+  margin: 0 auto; /* залишаємо по центру */
+  padding: 70px 50px;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.quote-card.dark h2 {
+  font-size: 30px; /* раніше було 26px */
+  margin-bottom: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quote-card.dark p {
+  margin-bottom: 20px;
+}
+
+.quote-card.dark p strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* === 5 БЛОК: Ви навчитеся === */
+/* === 5 БЛОК: Ви навчитеся === */
+.learn-section {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, var(--highlight-bg), var(--highlight-bottom));
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.learn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.learn-card {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.learn-card img {
+  width: 80%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.number-banner {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-banner p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* === КНОПКА === */
+.learn-btn-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.learn-btn-wrapper .btn {
+  padding: 14px 36px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--btn-color);
+  color: var(--btn-text);
+  text-decoration: none;
+  border: 2px solid var(--btn-color);
+  transition: all 0.3s ease;
+}
+
+.learn-btn-wrapper .btn:hover {
+  background-color: var(--btn-color-hover);
+  border-color: var(--btn-color-hover);
+  color: var(--btn-text);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+   /* === БЛОК 6: Як проходить навчання? === */
+.learning-section {
+  background-color: var(--highlight-bottom);
+  padding: 40px 16px; /* було 60px 20px */
+}
+
+.learning-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px; /* було 40px */
+}
+
+.learning-text {
+  flex: 1 1 500px;
+}
+
+.learning-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.learning-subtitle {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 30px;
+  color: #2f2f2f;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.learning-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+  margin-bottom: 20px;
+}
+
+.learning-list img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-top: 3px;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.learning-list strong {
+  font-size: 26px;
+  font-weight: 700;
+  display: block;
+  color: #070707;
+  text-shadow: 0.1px 0.1px #070707;
+}
+
+.learning-list span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #555;
+}
+
+.learning-image-wrapper {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.learning-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.learning-image-wrapper .btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--btn-color);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--btn-color);
+}
+
+.learning-image-wrapper .btn:hover {
+  background-color: var(--btn-color-hover);
+  color: #ffffff;
+  border-color: var(--btn-color-hover);
+}
+
+/* === БЛОК 7: Програма курсу === */
+.course-program {
+  padding: 60px 20px;
+  background: var(--highlight-bottom);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.program-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.lesson-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.lesson-content {
+  flex: 1 1 60%;
+  padding-right: 20px;
+}
+
+.lesson-day {
+  background: #e4e4e4;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  width: fit-content; /* підганяє під розмір тексту */
+  max-width: 90%; /* щоб не виходило за межі */
+}
+
+
+.lesson-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.lesson-content strong {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1f1f1f; /* або будь-який ваш акцентний */
+  display: block;
+  margin-bottom: 4px;
+}
+
+.lesson-content p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1f1f1f; /* або будь-який ваш акцентний */
+  display: block;
+  margin-bottom: 4px;
+}
+
+.lesson-extra {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.result-box, .bonus-box {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.bonus-box {
+  background-color: #d3e6c9;
+  color: #1f1f1f;
+}
+
+.lesson-img {
+  width: 20%;
+  max-width: 140px;
+  border-radius: 12px;
+  margin-right: 0px;
+  margin-left: 150px;
+}
+
+/* Гарантія результату */
+.guarantee-section {
+  background-color: var(--highlight-bg);
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.guarantee-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guarantee-left {
+  flex: 1 1 55%;
+}
+
+.guarantee-title {
+  font-size: 32px;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.guarantee-text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 0px;
+}
+
+.guarantee-text.bold {
+  font-weight: 600;
+}
+
+.guarantee-accent-second {
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--text-dark);
+  margin-top: 40px;  /* раніше було 80px — тепер 20px */
+}
+
+.guarantee-price .new-price,
+.guarantee-price .old-price {
+  font-weight: 300; /* Тонкий шрифт для всього тексту */
+  margin-top: 120px;
+}
+
+.guarantee-price .new-price strong {
+  font-weight: 700; /* Жирний шрифт лише для ціни 390 грн */
+}
+
+
+
+.guarantee-price {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  /* margin-top: -100px;*/
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--btn-color-hover);
+  font-size: 24px;
+}
+
+.new-price {
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.guarantee-btn {
+  background-color: var(--btn-color);
+  color: var(--btn-text);
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.guarantee-btn:hover {
+  background-color: var(--btn-color-hover);
+}
+
+.start-date {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #666;
+}
+
+.guarantee-right {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.guarantee-photo {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.guarantee-name {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+
+/* Блок Відгуки */
+.reviews-section {
+  background: linear-gradient(to bottom, var(--highlight-bg), var(--highlight-bottom));
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reviews-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.review-image {
+  max-height: 300px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* === FAQ Section === */
+.faq-section {
+  background: linear-gradient(to bottom, var(--highlight-bg), var(--highlight-bottom));
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.accordion details {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.accordion summary {
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.accordion summary:hover {
+  color: var(--accent-color, #444);
+}
+
+.accordion p {
+  padding: 10px 0 0 10px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* footer */
+.custom-footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.custom-footer p {
+  margin-bottom: 10px;
+}
+
+.footer-disclaimer {
+  font-size: 14px;
+  margin: 0;
+}
+
+.order-form {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  background: var(--highlight-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--highlight-bottom);
+}
+
+.order-input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border: 1px solid var(--highlight-bottom);
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  color: var(--text-dark);
+}
+
+.order-input:focus {
+  border-color: var(--frame-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(199, 160, 195, 0.5);
+}
+
+.guarantee-btn {
+  background-color: var(--btn-color);
+  color: var(--btn-text);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.guarantee-btn:hover {
+  background-color: var(--btn-color-hover);
+}
+
+
+@media (max-width: 768px) {
+  /* === Hero Section === */
+  .hero-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .info-block {
+    flex: 1 1 80%;
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
+
+  .info-item {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .info-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-text .label {
+    font-size: 12px;
+  }
+
+  .info-text .value {
+    font-size: 18px;
+  }
+
+  .hero-text {
+    flex: 1 1 100%;
+    padding: 0 15px;
+    order: 2;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    font-size: 26px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .hero-image {
+    flex: 1 1 100%;
+    padding: 10px 25px;
+    margin-top: 0px;
+    margin-right: 0px;
+    text-align: center;
+    order: 3;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: -40px;
+    margin-top: -10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .price {
+    display: flex;
+    justify-content: center; /* центрує весь рядок */
+    gap: 6px; /* відстань між елементами */
+    margin-top: 0px;
+  }
+
+  .price .new-price,
+  .price .old-price {
+    font-weight: 300; /* Тонкий шрифт для всього тексту */
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .price .new-price strong {
+    font-weight: 700; /* Жирний шрифт лише для ціни 390 грн */
+  }
+
+
+  .guarantee-accent-first {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-top: 10px;  /* раніше було 80px — тепер 20px */
+  }
+
+  .guarantee-accent-second {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-top: 10px;  /* раніше було 80px — тепер 20px */
+  }
+
+
+  .hero-button-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: -50px;
+    order: 4;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 12px 30px;
+    width: 90%;
+  }
+}
+/* Спочатку: десктоп — кнопка під текстом видима, під фото — схована */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Потім: на мобілці — кнопка під фото видима, під текстом — схована */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* === Адаптивність для блоку "Цей курс для тебе, якщо…" === */
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .course-card {
+    padding: 20px 16px;
+  }
+
+  .course-card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .course-card p {
+    font-size: 20px;
+  }
+
+}
+/* === Адаптивність для блоку "Авторка курсу" === */
+@media (max-width: 768px) {
+  .author-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .author-left,
+  .author-center,
+  .author-right {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -34px;
+  }
+  .author-center {
+    margin-top: 0px;
+  }
+
+  .author-list {
+    text-align: left;
+  }
+
+  .author-right {
+    margin-top: -54px;
+  }
+
+    .author-subtitle {
+    font-size: 20px;
+  }  
+  
+    .author-name {
+    font-size: 34px;
+  }
+
+    .author-description p {
+    font-size: 20px;
+  }
+
+  .banner {
+    margin-left: 0 !important;
+    max-width: 100%;
+  }
+}
+/* === Адаптивність для блоку "Цитата" === */
+
+@media (max-width: 768px) {
+  .quote-card.dark h2 {
+    font-size: 26px; /* або 20px, якщо потрібно ще менше */
+    line-height: 1.4;
+  }
+
+  .quote-card.dark {
+    padding: 50px 30px; /* трохи менше всередині */
+  }
+
+  .quote-card.dark p {
+    font-size: 20px; /* для кращого читання на мобільному */
+  }
+}
+
+/* === Адаптивність для 5 БЛОК: Ви навчитеся === */
+@media (max-width: 768px) {
+  .learn-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .learn-card {
+    width: 80%;
+    max-width: 320px;
+  }
+
+  .learn-card img {
+    width: 60%;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .learn-card p {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+}
+
+/* === Адаптивність для 6 БЛОК: Як проходить навчання? === */
+
+@media (max-width: 768px) {
+  .learning-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px; /* додано */
+  }
+  .learning-list strong {
+  font-weight: 700;
+  font-size: 20px;
+  color: #070707;
+  text-shadow: 0.1px 0.1px #070707;
+  }
+  
+  .learning-title {
+    text-align: center;
+  }
+
+  .learning-subtitle {
+    text-align: center;
+    margin-bottom: 12px; /* змінено */
+  }
+
+  .learning-list {
+    width: 100%;
+  }
+
+  .learning-list li {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 16px; /* додано */
+  }
+
+  .learning-image-wrapper {
+    width: 100%;
+  }
+
+  .learning-image {
+    margin-top: -10px;
+    margin-bottom: -10px; /* додано */
+  }
+
+  .learning-image-wrapper .btn {
+    width: 90%;
+    margin-top: 0px; /* вже було, залишаємо */
+  }
+}
+
+/* === Адаптивність для БЛОК 7: Програма курсу === */
+@media (max-width: 768px) {
+  /* Блок "Програма курсу" */
+  .program-title {
+    font-size: 26px;
+  }
+
+  .lesson-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .lesson-content {
+    flex: 1 1 80%;
+    padding-right: 0;
+  }
+  .lesson-extra {
+    flex: 1 1 80%;
+    align-items: center;
+  }
+  .lesson-img {
+    max-width: 80%;
+    margin-top: 12px;
+  }
+
+}
+
+/* 📱 Мобільна версія: ширина майже 100% */
+@media (max-width: 768px) {
+  .floating-btn {
+    width: calc(100% - 40px); /* відступи зліва і справа */
+    left: 20px;
+    right: 20px;
+    transform: none;
+    text-align: center;
+    padding: 16px;
+    font-size: 20px;
+  }
+}
+
+/* БЛОК 8: Гарантія результатуи */
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .guarantee-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  
+  .guarantee-price .new-price,
+  .guarantee-price .old-price {
+    font-weight: 300; /* Тонкий шрифт для всього тексту */
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .guarantee-price .new-price strong {
+    font-weight: 700; /* Жирний шрифт лише для ціни 390 грн */
+  }
+}
+
+/* Блок Відгуки */
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .reviews-container h2 {
+    font-size: 26px;
+  }
+
+  .review-image {
+    max-height: 220px;
+  }
+}
+
+/* === FAQ Section === */
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .faq-container h2 {
+    font-size: 26px;
+  }
+
+  .accordion summary {
+    font-size: 18px;
+  }
+
+  .accordion p {
+    font-size: 16px;
+  }
+}
+
+
+/* Мобільна адаптація */
+@media (max-width: 600px) {
+  .custom-footer {
+    padding: 30px 15px;
+  }
+
+  .footer-disclaimer {
+    font-size: 13px;
+  }
+}
