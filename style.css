@@ -955,15 +955,18 @@ header {
     align-items: flex-start;
   }
 
+
+
   .info-block {
-    flex: 1 1 80%;
-    flex-wrap: nowrap;
-    gap: 50px;
+    display: flex;              /* включаємо flexbox */
+    justify-content: space-between; /* розкидує елементи по краях */
+    align-items: center;        /* вирівнює їх по вертикалі */
+    width: 100%;                /* щоб займали всю ширину контейнера */
+    gap: 0;                     /* прибираємо фіксований gap */
   }
 
   .info-item {
-    font-size: 14px;
-    gap: 6px;
+    flex: 0 1 auto;             /* щоб не розтягувались неприродно */
   }
 
   .info-item img {
